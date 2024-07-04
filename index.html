@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The_Insane</title>
+
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        #container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        #boxes {
+            margin-top: 3em;
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .memory_box {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .memory_box>img {
+            width: 100%;
+            border-radius: 19px;
+        }
+
+        .no_see {
+            visibility: hidden;
+            opacity: .1;
+            transition: .1s ease;
+        }
+
+        .covered {
+            position: absolute;
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            border-radius: 19px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="boxes">
+            <div id="memory_box1" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box2" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box3" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box4" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box5" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box6" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box7" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box8" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box9" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box10" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box11" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box12" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box13" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box14" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box15" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+            <div id="memory_box16" class="memory_box">
+                <div class="covered"></div><img
+                    src="https://i.pinimg.com/564x/5d/cf/e2/5dcfe263a873d6c7c6657b8b516d1551.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let counter = 0;
+    let opt_1, opt_2;
+
+    document.querySelectorAll('.covered').forEach(element => {
+        element.addEventListener('click', function () {
+            console.log(this);
+            if (counter < 1) {
+                counter++;
+                this.classList.remove('covered');
+                if (counter === 0) {
+                    opt_1 = this;
+                }
+                else {
+                    opt_2 = this;
+                }
+            }
+
+
+        });
+    });
+</script>
+
+</html>
